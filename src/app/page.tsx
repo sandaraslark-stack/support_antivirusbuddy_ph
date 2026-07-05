@@ -7,6 +7,7 @@ import {
   FileArchive,
   FolderOpen,
   MonitorCheck,
+  MousePointerClick,
   RotateCcw,
   ShieldCheck,
 } from "lucide-react";
@@ -147,10 +148,13 @@ export default function Home() {
           <h1 className="text-center text-3xl font-bold tracking-normal sm:text-4xl">
             What do you need help with?
           </h1>
+          <p className="mt-3 text-center text-base font-semibold text-slate-600">
+            Click the option below to start.
+          </p>
 
           <div className="mt-7 grid gap-3">
             <button
-              className="flex w-full items-center justify-between gap-4 rounded-lg border border-emerald-200 bg-emerald-50 px-5 py-4 text-left transition hover:border-emerald-300 hover:bg-emerald-100"
+              className="flex w-full cursor-pointer items-center justify-between gap-4 rounded-lg border border-emerald-200 bg-emerald-50 px-5 py-4 text-left transition hover:border-emerald-300 hover:bg-emerald-100 focus:outline-none focus:ring-4 focus:ring-emerald-100"
               onClick={() => setSelectedGuide(true)}
               type="button"
             >
@@ -158,8 +162,9 @@ export default function Home() {
                 <span className="block text-base font-bold text-emerald-950">
                   MS Office 2024 (Genuine)
                 </span>
-                <span className="mt-1 block text-sm text-emerald-800">
-                  Easy installation guide
+                <span className="mt-1 flex items-center gap-2 text-sm font-semibold text-emerald-800">
+                  <MousePointerClick aria-hidden="true" className="size-4" />
+                  Click here to start the easy installation guide
                 </span>
               </span>
               <CheckCircle2
